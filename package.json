@@ -1,0 +1,13 @@
+{
+  "name": "cloudflare-rplace",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun --filter cloudflare-rplace-backend dev & bun --filter cloudflare-rplace-frontend dev"
+  },
+  "dependencies": {
+    "@cloudflare-rplace/shared": "workspace:*"
+  }
+}
