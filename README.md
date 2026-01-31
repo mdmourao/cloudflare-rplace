@@ -6,6 +6,8 @@ Testing cloudflare stack with a r/place clone.
 
 ```
 bun create cloudflare@latest cloudflare-rplace-backend
+
+## need to redo
 bun create cloudflare@latest cloudflare-rplace-frontend
 
 bun init -y
