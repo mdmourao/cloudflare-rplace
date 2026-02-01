@@ -1,6 +1,8 @@
 import { fromHono } from "chanfana";
 import { Hono } from "hono";
 
+export { CanvasRoom } from "./objects/CanvasRoom";
+
 const app = new Hono<{ Bindings: Env }>();
 
 export interface Env {
