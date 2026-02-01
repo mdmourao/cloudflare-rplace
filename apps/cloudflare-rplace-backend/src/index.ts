@@ -19,6 +19,11 @@ openapi.get("/counter", (c) => {
   return stub.fetch(c.req.raw);
 });
 
+app.get("/ws", async (c) => {
+  const id = c.env.CANVAS_ROOM.idFromName("counter-v1");
+  const stub = c.env.CANVAS_ROOM.get(id);
+  return stub.fetch(c.req.raw);
+});
 
 app.get('/private', (c) => c.text('Private route'));
 
