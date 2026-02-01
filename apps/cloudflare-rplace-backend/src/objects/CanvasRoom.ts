@@ -14,6 +14,7 @@ export class CanvasRoom extends DurableObject {
     let value = (await this.ctx.storage.get<number>("count")) || 0;
     value += 1;
     await this.ctx.storage.put("count", value);
+    this.broadcast(value);
     return new Response(`Counter: ${value}`);
   }
 

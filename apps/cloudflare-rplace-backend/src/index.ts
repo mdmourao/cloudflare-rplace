@@ -14,7 +14,7 @@ const openapi = fromHono(app, {
 });
 
 openapi.get("/counter", (c) => {
-  const id = c.env.CANVAS_ROOM.idFromName("counter-1");
+  const id = c.env.CANVAS_ROOM.idFromName("counter-v1");
   const stub = c.env.CANVAS_ROOM.get(id);
   return stub.fetch(c.req.raw);
 });
